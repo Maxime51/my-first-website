@@ -25,11 +25,9 @@
 {% block contenu%}
  <section id="contenu">
 
-  <a href="/hobbies/artistes"><button >Artistes</button></a>
-  <a href="/hobbies/films"><button >Films</button></a>
-  <a href="/hobbies/livres"><button >Livres</button></a>
-  <a href="/hobbies/loisirs"><button >Loisirs</button></a>
-
+    {% for hobbies in listOfHobbies%}
+      <a href="/hobbies/{{hobbies}}"><button >{{hobbies}}</button></a>
+    {% endfor %}
 
     <section class="listHobbies">
       <div id="divHobbies">

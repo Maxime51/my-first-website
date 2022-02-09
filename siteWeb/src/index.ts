@@ -5,6 +5,7 @@ import { artistes } from "./listOfArtistes";
 import { films } from "./listOfFilms";
 import { livres } from "./listOfLivres";
 import { loisirs } from "./listOfLoisirs";
+import { listOfHobbies } from "./listOfHobbies";
 
 const app = express();
 
@@ -38,7 +39,13 @@ app.get("/blog/articles/:articleName", (request, response) => {
     }
   });
 
-  response.render("blog", { articleTitleSelected, articleNameSelected, articleDescriptionSelected, affiche });
+  response.render("blog", {
+    articleTitleSelected,
+    articleNameSelected,
+    articleDescriptionSelected,
+    affiche,
+    listeOfArticles,
+  });
 });
 
 //route hobbies
@@ -58,7 +65,7 @@ app.get("/hobbies/:selected", (request, response) => {
     hobbiesSend = loisirs;
   }
 
-  response.render("hobbies", { hobbiesSend, affiche });
+  response.render("hobbies", { hobbiesSend, affiche, listOfHobbies });
 });
 
 //route hobbies details artistes
@@ -72,7 +79,7 @@ app.get("/hobbies/artistes/:selected", (request, response) => {
   const hobbiesSend = artistes;
   hobbiesSend.forEach((element) => {
     if (element.id === hobbiesSelected) {
-      response.render("hobbies", { hobbiesSend, affiche, element, afficheDetails });
+      response.render("hobbies", { hobbiesSend, affiche, element, afficheDetails, listOfHobbies });
     }
   });
 });
@@ -88,7 +95,7 @@ app.get("/hobbies/films/:selected", (request, response) => {
   const hobbiesSend = films;
   hobbiesSend.forEach((element) => {
     if (element.id === hobbiesSelected) {
-      response.render("hobbies", { hobbiesSend, affiche, element, afficheDetails });
+      response.render("hobbies", { hobbiesSend, affiche, element, afficheDetails, listOfHobbies });
     }
   });
 });
@@ -104,7 +111,7 @@ app.get("/hobbies/livres/:selected", (request, response) => {
   const hobbiesSend = livres;
   hobbiesSend.forEach((element) => {
     if (element.id === hobbiesSelected) {
-      response.render("hobbies", { hobbiesSend, affiche, element, afficheDetails });
+      response.render("hobbies", { hobbiesSend, affiche, element, afficheDetails, listOfHobbies });
     }
   });
 });
@@ -121,7 +128,7 @@ app.get("/hobbies/loisirs/:selected", (request, response) => {
 
   hobbiesSend.forEach((element) => {
     if (element.id === hobbiesSelected) {
-      response.render("hobbies", { hobbiesSend, affiche, element, afficheDetails });
+      response.render("hobbies", { hobbiesSend, affiche, element, afficheDetails, listOfHobbies });
     }
   });
 });
@@ -130,10 +137,10 @@ app.get("/description", (request, response) => {
   response.render("description");
 });
 app.get("/blog", (request, response) => {
-  response.render("blog");
+  response.render("blog", { listeOfArticles });
 });
 app.get("/hobbies", (request, response) => {
-  response.render("hobbies");
+  response.render("hobbies", { listOfHobbies });
 });
 app.get("/pokemon", (request, response) => {
   response.render("pokemon");
