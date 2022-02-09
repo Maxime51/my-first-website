@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="/css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <script type="text/javascript">
+    function afficher()
+    {
+      document.querySelector(".imgDescription").style.visibility="visible";
+      document.querySelector(".imgHobbies").style.visibility="visible";
+      document.querySelector(".imgBlog").style.visibility="visible";
+    }
+  </script>
+</head>
+<body>
+  {% block top%}{% endblock %}
+  {% block contenu%}{% endblock %}
+</body>
+</html>

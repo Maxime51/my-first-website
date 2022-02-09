@@ -1,0 +1,63 @@
+{% extends "layout.njk" %}
+<style>
+      .divider{
+      height: 5px;
+      width: 1000px;
+      background-color: white;
+      margin-left: 100px;
+      margin-top: 30px;
+      margin-right: 300px;
+      border-radius: 10px;
+    }
+</style>
+{% block top%}
+  <div class="top">
+    <div>
+      <a href="/description"><img class="imgDescription" src="/images/pages/menuDescription.png"></a>
+      <a onclick="afficher()"><img class="imgAccueil" src="/images/pages/menuAccueilHobbies.png"></a>
+    <a href="/"><img class="imgHobbies" src="/images/pages/menuAccueil.png"></a>
+    </div>
+    <div>
+      <a href="/blog"><img class="imgBlog" src="/images/pages/menuBlog.png"></a>
+    </div>
+  </div>
+{% endblock %}
+{% block contenu%}
+ <section id="contenu">
+
+  <a href="/hobbies/artistes"><button >Artistes</button></a>
+  <a href="/hobbies/films"><button >Films</button></a>
+  <a href="/hobbies/livres"><button >Livres</button></a>
+  <a href="/hobbies/loisirs"><button >Loisirs</button></a>
+
+
+    <section class="listHobbies">
+      <div id="divHobbies">
+        {% for item in hobbiesSend %}
+          {% if affiche %}
+              <a href={{item.lien}}>
+                <div class="Lignes">
+                <img src={{item.logo}}>
+                <h2>{{item.name}}</h2>
+                </div>
+              </a>
+            <div class="divider"></div>
+          {% endif %}
+        {% endfor %}
+      </div>
+      <div id="divInfoHobbies">
+        <div class="hobbiesDetails">
+        <h2>{{element.name}}</h2>
+        {% if afficheDetails %}
+          <div class="divider"></div>
+        {% endif %}
+        <p>{{element.description}}</p>
+      </div>
+      </div>
+  </section>
+  </section>
+{% endblock %}
+
+
+
+

@@ -1,0 +1,36 @@
+{% extends "layout.njk" %}
+
+{% block top%}
+  <div class="top">
+    <div>
+      <a href="/"><img class="imgDescription" src="/images/pages/menuAccueil.png"></a>
+      <a onclick="afficher()"><img class="imgAccueil" src="/images/pages/menuAccueilBlog.png"></a>
+     <a href="/hobbies"><img class="imgHobbies" src="/images/pages/menuHobbies.png"></a>
+    </div>
+    <div>
+      <a href="/description"><img class="imgBlog" src="/images/pages/menuDescription.png"></a>
+    </div>
+  </div>
+{% endblock %}
+{% block contenu%}
+ <section id="contenu">
+
+    <a href="/blog/articles/article_one"><button >Article 1</button></a>
+    <a href="/blog/articles/article_two"><button >Article 2</button></a>
+    <a href="/blog/articles/article_three"><button >Article 3</button></a>
+    <a href="/blog/articles/article_four"><button >Article 4</button></a>
+    </section>
+    <div id="divBlog">
+      <div class="article">
+        <h2>{{articleTitleSelected}}</h2>
+        {% if affiche %}
+          <div class="divider"></div>
+        {% endif %}
+        <p>{{articleDescriptionSelected}}</p>
+      </div>
+    </div>
+  </section>
+{% endblock %}
+
+
+

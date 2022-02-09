@@ -1,0 +1,182 @@
+html, body { height : 100%; width: 100%;  margin:0;margin-bottom: 150px; }
+/* min-width: 1680px; min-width: 1300px;*/
+html{
+  background-image: url("/images/pages/backgroundtest.png");
+
+}
+
+.top{
+  text-align: center;
+  display: flex;
+  flex-direction:column;
+  height: 20%;
+}
+
+.imgAccueil{
+
+}
+#imgDescription{
+  visibility:hidden;
+}
+.imgHobbies{
+  visibility:hidden;
+}
+.imgBlog{
+padding-top: 2%;
+visibility:hidden;
+}
+
+.menu{
+  display: flex;
+  flex-direction: row;
+  color:white;
+  float: right;
+}
+
+.menu h3{
+  margin-right: 20px;
+}
+
+.divDescription{
+  height: 450px;
+  width: 500px;
+  border: solid;
+  border-color: #060e38;
+  border-radius: 20px;
+  border-width: 5px;
+  margin-left: 550px;
+  margin-top: 300px;
+  max-width: 500px;
+  box-shadow: 10px 5px 5px rgb(238, 234, 234);
+  }
+  .divDescription p {
+    font-size: 25px;
+    text-align: center;
+    padding-top: 100px;
+
+  }
+  #divBlog{
+    overflow: auto;
+    height: 550px;
+    width: 900px;
+    border: solid;
+    border-color: #060e38;
+    border-radius: 20px;
+    border-width: 5px;
+    margin-left: 400px;
+    margin-top: 50px;
+    max-width: 900px;
+    box-shadow: 10px 5px 5px rgb(238, 234, 234);
+    }
+#divBlog .divider{
+  padding-left: 190px;
+}
+    #divHobbies{
+      overflow: auto;
+      height: 550px;
+      width: 700px;
+      border: solid;
+      border-color: #060e38;
+      border-radius: 20px;
+      border-width: 5px;
+      margin-left:  50px;
+      margin-top: 50px;
+      margin-bottom: 150px;
+      max-width: 1200px;
+      box-shadow: 10px 5px 5px rgb(238, 234, 234);
+      }
+
+
+#contenu{
+  letter-spacing: 25px;
+  height: 50px;
+  padding-top: 250px;
+  text-align: center;
+}
+
+#contenu button {
+  width: 200px;
+  height: 50px;
+  background-image: url("/images/pages/backgroundButton.png");
+  color: white;
+  font-size: 20px;
+  border-radius: 30px;
+  box-shadow: 10px 5px 5px rgb(255, 255, 255);
+}
+
+.divHobbies{
+  display: flex;
+  flex-direction: column;
+}
+.Lignes{
+  padding-top: 40px;
+  display: flex;
+  flex-direction: row;
+}
+.Lignes h2{
+  padding-left: 100px;
+font-size: 25px;
+color:white;
+text-align: left;
+}
+.Lignes img{
+  padding-left: 50px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+ }
+
+/* pokemon */
+.listHobbies{
+display: flex;
+flex-direction: row;
+}
+
+  #divInfoHobbies{
+    overflow: auto;
+    height: 550px;
+    width: 700px;
+    border: solid;
+    border-color: #060e38;
+    border-radius: 20px;
+    border-width: 5px;
+    margin-left: 100px;
+    margin-top: 50px;
+    max-width: 900px;
+    box-shadow: 10px 5px 5px rgb(238, 234, 234);
+    }
+/* div articles css*/
+.article{
+  text-align: center;
+}
+.article h2 {
+  font-size: 25px;
+}
+
+/* div hobbiesDetails css*/
+.hobbiesDetails{
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.hobbiesDetails h2 {
+  font-size: 25px;
+}
+
+
+.divider{
+height: 5px;
+width: 600px;
+background-color: white;
+margin-left: 50px;
+margin-top: 50px;
+margin-right: 300px;
+border-radius: 10px;
+}
+.article p {
+  font-size: 20px;
+  text-align: center;
+  padding-top: 50px;
+}
