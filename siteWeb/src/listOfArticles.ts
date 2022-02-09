@@ -23,6 +23,12 @@ const listeOfArticles = [
     description:
       "Ce matin, aucun crieur ne vous a proposé de lire Metronews dans les transports.Le quotidien gratuit a en effet décidé de ne pas paraître en version papier pendant au moins cinq jours durant le mois de janvier.L'édition devrait être remplacée par un PDF téléchargeable sur le site Metronews.fr.Une mesure temporaire et conjoncturelle: Metronews doit faire face à une contraction du marché publicitaire, sur lequel ses revenus sont en recul sur les neuf premiers mois de l'année, d'après les derniers résultats trimestriels du groupe TF1, sa maison mère.",
   },
+  {
+    title: "article_five",
+    name: "20 Minutes change de patron",
+    description:
+      "INFO LE FIGARO - Pierre-Jean Bozo, qui dirigeait le quotidien gratuit depuis 2004, est remplacé par Olivier Bonsart.Pierre-Jean Bozo va quitter la présidence de 20 Minutes France, poste qu'il occupait depuis 2004. Il est remplacé par Olivier Bonsart, déjà membre du conseil de surveillance de la société et par ailleurs directeur délégué du groupe Sipa/Ouest-France, qui détient à parité avec le groupe norvégien Schibsted le groupe de presse gratuite dans l'Hexagone.",
+  },
 ];
 
 export { listeOfArticles };
