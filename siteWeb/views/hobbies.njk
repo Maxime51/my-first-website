@@ -23,12 +23,12 @@
   </div>
 {% endblock %}
 {% block contenu%}
- <section id="contenu">
-
-    {% for hobbies in listOfHobbies%}
-      <a href="/hobbies/{{hobbies}}"><button >{{hobbies}}</button></a>
-    {% endfor %}
-
+<div id="menuHobbies">
+  {% for hobbies in listOfHobbies%}
+    <a href="/hobbies/{{hobbies}}"><button >{{hobbies}}</button></a>
+  {% endfor %}
+</div>
+ <section id="contenuHobbies">
     <section class="listHobbies">
       <div id="divHobbies">
         {% for item in hobbiesSend %}

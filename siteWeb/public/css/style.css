@@ -1,4 +1,4 @@
-html, body { height : 100%; width: 100%;  margin:0;margin-bottom: 150px; }
+html, body { height : 100%; width: 100%;  margin:0; }
 /* min-width: 1680px; min-width: 1300px;*/
 html{
   background-image: url("/images/pages/backgroundtest.png");
@@ -44,8 +44,8 @@ visibility:hidden;
   border-color: #060e38;
   border-radius: 20px;
   border-width: 5px;
-  margin-left: 550px;
-  margin-top: 300px;
+  margin-left: 580px;
+  margin-top: 200px;
   max-width: 500px;
   box-shadow: 10px 5px 5px rgb(238, 234, 234);
   }
@@ -64,7 +64,8 @@ visibility:hidden;
     border-radius: 20px;
     border-width: 5px;
     margin-left: 400px;
-    margin-top: 50px;
+    margin-top: 200px;
+    margin-bottom: 200px;
     max-width: 900px;
     box-shadow: 10px 5px 5px rgb(238, 234, 234);
     }
@@ -86,14 +87,38 @@ visibility:hidden;
       box-shadow: 10px 5px 5px rgb(238, 234, 234);
       }
 
-
-#contenu{
-  letter-spacing: 25px;
+footer{
   height: 50px;
-  padding-top: 250px;
+}
+#contenu{
+  overflow: auto;
+  float: left;
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  margin-top: 300px;
+  text-align: center;
+}
+#contenuHobbies{
+  overflow: auto;
+  height: 800px;
+  margin-top: 50px;
   text-align: center;
 }
 
+#menuHobbies{
+  text-align: center;
+  margin-top:200px;
+}
+#menuHobbies button{
+  width: 200px;
+  height: 50px;
+  background-image: url("/images/pages/backgroundButton.png");
+  color: white;
+  font-size: 20px;
+  border-radius: 30px;
+  box-shadow: 10px 5px 5px rgb(255, 255, 255);
+}
 #contenu button {
   width: 200px;
   height: 50px;
@@ -126,6 +151,7 @@ text-align: left;
 a {
   color: inherit;
   text-decoration: none;
+  margin: 10px 30px;
  }
 
 /* pokemon */
