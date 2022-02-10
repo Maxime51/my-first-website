@@ -1,4 +1,13 @@
 {% extends "layout.njk" %}
+{% block css %}
+  {% if colorGreen %}
+    <link rel="stylesheet" href="/css/styleGreen.css" />
+  {% elif colorBlue %}
+    <link rel="stylesheet" href="/css/style.css" />
+  {% else %}
+    <link rel="stylesheet" href="/css/style.css" />
+  {% endif %}
+{% endblock %}
 <style>
       .divider{
       height: 5px;
@@ -12,7 +21,21 @@
 </style>
 {% block top%}
   <div class="top">
+   {% if colorGreen %}
+      <div>
+      <a href="/options"><button class="buttonMode">MODE</button></a>
+      <a href="/description"><img class="imgDescription" src="/images/pages/menuDescriptionGreen.png"></a>
+      <a onclick="afficher()"><img class="imgAccueil" src="/images/pages/menuAccueilHobbiesGreen.png"></a>
+    <a href="/"><img class="imgHobbies" src="/images/pages/menuAccueilGreen.png"></a>
+    </div>
     <div>
+      <a href="/blog"><img class="imgBlog" src="/images/pages/menuBlogGreen.png"></a>
+    </div>
+  </div>
+  {% elif colorBlue %}
+
+     <div>
+     <a href="/options"><button class="buttonMode">MODE</button></a>
       <a href="/description"><img class="imgDescription" src="/images/pages/menuDescription.png"></a>
       <a onclick="afficher()"><img class="imgAccueil" src="/images/pages/menuAccueilHobbies.png"></a>
     <a href="/"><img class="imgHobbies" src="/images/pages/menuAccueil.png"></a>
@@ -21,6 +44,20 @@
       <a href="/blog"><img class="imgBlog" src="/images/pages/menuBlog.png"></a>
     </div>
   </div>
+  {% else %}
+
+     <div>
+   <a href="/options"><button class="buttonMode">MODE</button></a>
+      <a href="/description"><img class="imgDescription" src="/images/pages/menuDescription.png"></a>
+      <a onclick="afficher()"><img class="imgAccueil" src="/images/pages/menuAccueilHobbies.png"></a>
+    <a href="/"><img class="imgHobbies" src="/images/pages/menuAccueil.png"></a>
+    </div>
+    <div>
+      <a href="/blog"><img class="imgBlog" src="/images/pages/menuBlog.png"></a>
+    </div>
+  </div>
+  {% endif %}
+
 {% endblock %}
 {% block contenu%}
 <div id="menuHobbies">

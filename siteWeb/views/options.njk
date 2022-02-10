@@ -1,0 +1,33 @@
+{% extends "layout.njk" %}
+
+{% block css %}
+  {% if colorGreen %}
+    <link rel="stylesheet" href="/css/styleGreen.css" />
+  {% elif colorBlue %}
+    <link rel="stylesheet" href="/css/style.css" />
+  {% else %}
+    <link rel="stylesheet" href="/css/style.css" />
+  {% endif %}
+{% endblock %}
+
+{% block contenu%}
+  <div class="contenuMiddle">
+    <div class="box">
+      <h2>Choose your appearance :<h2>
+      <form method="POST" action="/handle-form" class="form">
+        <div class="buttonRadio">
+          <input type="radio" value="green" name="choiceColor">
+          <label for="green">Green Mode</label>
+          <input type="radio" value="blue" name="choiceColor">
+          <label for="blue">Blue Mode</label>
+        </div>
+        <button type="submit" class="buttonForm">
+          Submit
+        </button>
+      </form>
+    </div>
+  </div>
+{% endblock %}
+
+
+

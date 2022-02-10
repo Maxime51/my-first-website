@@ -1,8 +1,31 @@
 {% extends "layout.njk" %}
 
+{% block css %}
+  {% if colorGreen %}
+    <link rel="stylesheet" href="/css/styleGreen.css" />
+  {% elif colorBlue %}
+    <link rel="stylesheet" href="/css/style.css" />
+  {% else %}
+    <link rel="stylesheet" href="/css/style.css" />
+  {% endif %}
+{% endblock %}
+
 {% block top%}
   <div class="top">
+  {% if colorGreen %}
     <div>
+      <a href="/options"><button class="buttonMode">MODE</button></a>
+      <a href="/"><img class="imgDescription" src="/images/pages/menuAccueilGreen.png"></a>
+      <a onclick="afficher()"><img class="imgAccueil" src="/images/pages/menuAccueilBlogGreen.png"></a>
+     <a href="/hobbies"><img class="imgHobbies" src="/images/pages/menuHobbiesGreen.png"></a>
+    </div>
+    <div>
+      <a href="/description"><img class="imgBlog" src="/images/pages/menuDescriptionGreen.png"></a>
+    </div>
+  </div>
+  {% elif colorBlue %}
+    <div>
+      <a href="/options"><button class="buttonMode">MODE</button></a>
       <a href="/"><img class="imgDescription" src="/images/pages/menuAccueil.png"></a>
       <a onclick="afficher()"><img class="imgAccueil" src="/images/pages/menuAccueilBlog.png"></a>
      <a href="/hobbies"><img class="imgHobbies" src="/images/pages/menuHobbies.png"></a>
@@ -11,6 +34,19 @@
       <a href="/description"><img class="imgBlog" src="/images/pages/menuDescription.png"></a>
     </div>
   </div>
+  {% else %}
+    <div>
+      <a href="/options"><button class="buttonMode">MODE</button></a>
+      <a href="/"><img class="imgDescription" src="/images/pages/menuAccueil.png"></a>
+      <a onclick="afficher()"><img class="imgAccueil" src="/images/pages/menuAccueilBlog.png"></a>
+     <a href="/hobbies"><img class="imgHobbies" src="/images/pages/menuHobbies.png"></a>
+    </div>
+    <div>
+      <a href="/description"><img class="imgBlog" src="/images/pages/menuDescription.png"></a>
+    </div>
+  </div>
+  {% endif %}
+
 {% endblock %}
 {% block contenu%}
  <section id="contenu">
