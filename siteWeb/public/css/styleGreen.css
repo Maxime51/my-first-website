@@ -24,21 +24,43 @@ html{
   left:1px;
 }
 .imgAccueil{
-  background: url("/images/pages/menuAccueilHobbiesGreen.png");
-  background-image: "/images/pages/menuAccueilHobbiesGreen.png";
+  border-bottom-left-radius: 200px;
+  border-bottom-right-radius: 200px;
+  background-color: hsl(130, 81%, 12%);
+  color: white;
+  height: 200px;
+  width: 300px;
 }
-#imgDescription{
+.imgDescription{
   visibility:hidden;
-  background-image: "/images/pages/menuDescriptionGreen.png";
+  background-color: hsl(130, 81%, 12%);
+  border-radius: 50%;
+  height: 120px;
+  width: 120px;
+  margin-left: 50px;
+  color: white;
+  margin-top: 20px;
 }
 .imgHobbies{
   visibility:hidden;
-  background-image: "/images/pages/menuAccueilGreen.png";
+  background-color: hsl(130, 81%, 12%);
+  border-radius: 50%;
+  height: 120px;
+  width: 120px;
+  color: white;
+  margin-left: 50px;
+  margin-top: 20px;
 }
 .imgBlog{
-padding-top: 2%;
-visibility:hidden;
-background-image: "/images/pages/menuBlogGreen.png";
+  visibility:hidden;
+  background-color: hsl(130, 81%, 12%);
+  border-radius: 50%;
+  height: 120px;
+  width: 120px;
+  color: white;
+  text-align: center;
+  margin-left: 50px;
+  margin-top: 20px;
 }
 
 .menu{

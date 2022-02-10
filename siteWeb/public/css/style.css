@@ -21,17 +21,43 @@ html{
   color:white;
 }
 .imgAccueil{
-
+  border-bottom-left-radius: 200px;
+  border-bottom-right-radius: 200px;
+  background-color: #060e38;
+  color: white;
+  height: 200px;
+  width: 300px;
 }
-#imgDescription{
+.imgDescription{
   visibility:hidden;
+  background-color: #060e38;
+  border-radius: 50%;
+  height: 120px;
+  width: 120px;
+  color: white;
+  margin-left: 50px;
+  margin-top: 20px;
 }
 .imgHobbies{
   visibility:hidden;
+  background-color: #060e38;
+  border-radius: 50%;
+  height: 120px;
+  width: 120px;
+  color: white;
+  margin-left: 50px;
+  margin-top: 20px;
 }
 .imgBlog{
-padding-top: 2%;
-visibility:hidden;
+  visibility:hidden;
+  background-color: #060e38;
+  border-radius: 50%;
+  height: 120px;
+  width: 120px;
+  color: white;
+  text-align: center;
+  margin-left: 50px;
+  margin-top: 20px;
 }
 
 .menu{

@@ -22,8 +22,13 @@ app.set("view engine", "njk");
 //création de route
 app.get("/", (request, response) => {
   const cookies = cookie.parse(request.get("cookie") || "");
-  const color = cookies.colorModeCookie.split(":")[1].split('"');
-  const colorSend = color[1];
+  let colorSend = "";
+  if (cookies.colorModeCookie === undefined) {
+    colorSend = "blue";
+  } else {
+    const color = cookies.colorModeCookie.split(":")[1].split('"');
+    colorSend = color[1];
+  }
   let colorGreen = "";
   let colorBlue = "";
   if (colorSend === "green") {
@@ -294,8 +299,13 @@ app.post("/handle-form", formParser, (request, response) => {
 
 app.get("/options", (request, response) => {
   const cookies = cookie.parse(request.get("cookie") || "");
-  const color = cookies.colorModeCookie.split(":")[1].split('"');
-  const colorSend = color[1];
+  let colorSend = "";
+  if (cookies[0] === undefined) {
+    colorSend = "blue";
+  } else {
+    const color = cookies.colorModeCookie.split(":")[1].split('"');
+    colorSend = color[1];
+  }
   let colorGreen = "";
   let colorBlue = "";
   if (colorSend === "green") {

@@ -12,41 +12,17 @@
 
 {% block top%}
   <div class="top">
-  {% if colorGreen %}
-     <div>
-     <a href="/options"><button class="buttonMode">MODE</button></a>
-    <a href="/"><img class="imgDescription" src="/images/pages/menuAccueilGreen.png"></a>
-    <a onclick="afficher()"><img class="imgAccueil" src="/images/pages/menuAccueilDescriptionGreen.png"></a>
-    <a href="/hobbies"><img class="imgHobbies" src="/images/pages/menuHobbiesGreen.png"></a>
-    </div>
-    <div>
-      <a href="/blog"><img class="imgBlog" src="/images/pages/menuBlogGreen.png"></a>
-    </div>
-  </div>
-  {% elif colorBlue %}
-     <div>
-     <a href="/options"><button class="buttonMode">MODE</button></a>
-    <a href="/"><img class="imgDescription" src="/images/pages/menuAccueil.png"></a>
-    <a onclick="afficher()"><img class="imgAccueil" src="/images/pages/menuAccueilDescription.png"></a>
-    <a href="/hobbies"><img class="imgHobbies" src="/images/pages/menuHobbies.png"></a>
-    </div>
-    <div>
-      <a href="/blog"><img class="imgBlog" src="/images/pages/menuBlog.png"></a>
-    </div>
-  </div>
-  {% else %}
+
      <div>
       <a href="/options"><button class="buttonMode">MODE</button></a>
-    <a href="/"><img class="imgDescription" src="/images/pages/menuAccueil.png"></a>
-    <a onclick="afficher()"><img class="imgAccueil" src="/images/pages/menuAccueilDescription.png"></a>
-    <a href="/hobbies"><img class="imgHobbies" src="/images/pages/menuHobbies.png"></a>
+    <a href="/"><button class="imgDescription">ACCUEIL</button></a>
+    <a onclick="afficher()"><button class="imgAccueil">DESCRIPTION</button></a>
+    <a href="/hobbies"><button class="imgHobbies">HOBBIES</button></a>
     </div>
     <div>
-      <a href="/blog"><img class="imgBlog" src="/images/pages/menuBlog.png"></a>
+      <a href="/blog"><button class="imgBlog">BLOG</button></a>
     </div>
   </div>
-  {% endif %}
-
 {% endblock %}
 {% block contenu%}
   <section class="contenu">
