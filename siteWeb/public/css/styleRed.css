@@ -150,7 +150,7 @@ footer{
 #menuHobbies button{
   width: 200px;
   height: 50px;
-  background-image: url("/images/pages/backgroundButtonGreen.png");
+  background-color: red;
   color: white;
   font-size: 20px;
   border-radius: 30px;
@@ -159,7 +159,7 @@ footer{
 #contenu button {
   width: 200px;
   height: 50px;
-  background-image: url("/images/pages/backgroundButtonGreen.png");
+  background-color:red;
   color: white;
   font-size: 20px;
   border-radius: 30px;

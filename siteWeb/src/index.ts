@@ -272,51 +272,67 @@ app.get("/hobbies/loisirs/:selected", (request, response) => {
 
 app.get("/description", (request, response) => {
   const cookies = cookie.parse(request.get("cookie") || "");
-  const color = cookies.colorModeCookie.split(":")[1].split('"');
-  const colorSend = color[1];
-  let colorGreen = "";
-  let colorBlue = "";
-  let colorRed = "";
-  if (colorSend === "green") {
-    colorGreen = "green";
-  } else if (colorSend === "blue") {
-    colorBlue = "blue";
-  } else if (colorSend === "red") {
-    colorRed = "red";
+
+  if (cookies.colorModeCookie !== undefined) {
+    const color = cookies.colorModeCookie.split(":")[1].split('"');
+    const colorSend = color[1];
+    let colorGreen = "";
+    let colorBlue = "";
+    let colorRed = "";
+    if (colorSend === "green") {
+      colorGreen = "green";
+    } else if (colorSend === "blue") {
+      colorBlue = "blue";
+    } else if (colorSend === "red") {
+      colorRed = "red";
+    }
+    response.render("description", { colorGreen, colorBlue, colorRed });
+  } else {
+    response.render("description", { colorBlue: "blue" });
   }
-  response.render("description", { colorGreen, colorBlue, colorRed });
 });
 app.get("/blog", (request, response) => {
   const cookies = cookie.parse(request.get("cookie") || "");
-  const color = cookies.colorModeCookie.split(":")[1].split('"');
-  const colorSend = color[1];
-  let colorGreen = "";
-  let colorBlue = "";
-  let colorRed = "";
-  if (colorSend === "green") {
-    colorGreen = "green";
-  } else if (colorSend === "blue") {
-    colorBlue = "blue";
-  } else if (colorSend === "red") {
-    colorRed = "red";
+
+  if (cookies.colorModeCookie !== undefined) {
+    const color = cookies.colorModeCookie.split(":")[1].split('"');
+    const colorSend = color[1];
+    console.log(colorSend);
+    let colorGreen = "";
+    let colorBlue = "";
+    let colorRed = "";
+    if (colorSend === "green") {
+      colorGreen = "green";
+    } else if (colorSend === "blue") {
+      colorBlue = "blue";
+    } else if (colorSend === "red") {
+      colorRed = "red";
+    }
+    response.render("blog", { colorGreen, colorBlue, colorRed, listeOfArticles });
+  } else {
+    response.render("blog", { colorBlue: "blue", listeOfArticles });
   }
-  response.render("blog", { listeOfArticles, colorGreen, colorBlue, colorRed });
 });
 app.get("/hobbies", (request, response) => {
   const cookies = cookie.parse(request.get("cookie") || "");
-  const color = cookies.colorModeCookie.split(":")[1].split('"');
-  const colorSend = color[1];
-  let colorGreen = "";
-  let colorBlue = "";
-  let colorRed = "";
-  if (colorSend === "green") {
-    colorGreen = "green";
-  } else if (colorSend === "blue") {
-    colorBlue = "blue";
-  } else if (colorSend === "red") {
-    colorRed = "red";
+
+  if (cookies.colorModeCookie !== undefined) {
+    const color = cookies.colorModeCookie.split(":")[1].split('"');
+    const colorSend = color[1];
+    let colorGreen = "";
+    let colorBlue = "";
+    let colorRed = "";
+    if (colorSend === "green") {
+      colorGreen = "green";
+    } else if (colorSend === "blue") {
+      colorBlue = "blue";
+    } else if (colorSend === "red") {
+      colorRed = "red";
+    }
+    response.render("hobbies", { colorGreen, colorBlue, colorRed, listOfHobbies });
+  } else {
+    response.render("hobbies", { colorBlue: "blue", listOfHobbies });
   }
-  response.render("hobbies", { listOfHobbies, colorGreen, colorBlue, colorRed });
 });
 
 //change color mode
