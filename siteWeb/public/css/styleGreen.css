@@ -5,11 +5,11 @@ html{
 
 }
 .buttonMode{
+  background-color: hsl(130, 81%, 12%);
   position:absolute;
   left:1px;
   height: 100px;
   width: 100px;
-  background-image: url("/images/pages/backgroundButtonGreen.png");
   border-radius:50%;
   color:white;
 }

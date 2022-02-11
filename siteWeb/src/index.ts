@@ -31,12 +31,15 @@ app.get("/", (request, response) => {
   }
   let colorGreen = "";
   let colorBlue = "";
+  let colorRed = "";
   if (colorSend === "green") {
-    colorGreen = "#green";
+    colorGreen = "green";
   } else if (colorSend === "blue") {
-    colorBlue = "#green";
+    colorBlue = "blue";
+  } else if (colorSend === "red") {
+    colorRed = "red";
   }
-  response.render("home", { colorGreen, colorBlue });
+  response.render("home", { colorGreen, colorBlue, colorRed });
 });
 
 //route articles
@@ -46,10 +49,13 @@ app.get("/blog/articles/:articleName", (request, response) => {
   const colorSend = color[1];
   let colorGreen = "";
   let colorBlue = "";
+  let colorRed = "";
   if (colorSend === "green") {
-    colorGreen = "#green";
+    colorGreen = "green";
   } else if (colorSend === "blue") {
-    colorBlue = "#green";
+    colorBlue = "blue";
+  } else if (colorSend === "red") {
+    colorRed = "red";
   }
   const routeParameters = request.params;
   const article = routeParameters.articleName;
@@ -74,6 +80,7 @@ app.get("/blog/articles/:articleName", (request, response) => {
     listeOfArticles,
     colorBlue,
     colorGreen,
+    colorRed,
   });
 });
 
@@ -85,10 +92,13 @@ app.get("/hobbies/:selected", (request, response) => {
   const colorSend = color[1];
   let colorGreen = "";
   let colorBlue = "";
+  let colorRed = "";
   if (colorSend === "green") {
-    colorGreen = "#green";
+    colorGreen = "green";
   } else if (colorSend === "blue") {
-    colorBlue = "#green";
+    colorBlue = "blue";
+  } else if (colorSend === "red") {
+    colorRed = "red";
   }
   const routeParameters = request.params;
   const hobbiesSelected = routeParameters.selected;
@@ -104,7 +114,7 @@ app.get("/hobbies/:selected", (request, response) => {
     hobbiesSend = loisirs;
   }
 
-  response.render("hobbies", { hobbiesSend, affiche, listOfHobbies, colorBlue, colorGreen });
+  response.render("hobbies", { hobbiesSend, affiche, listOfHobbies, colorBlue, colorGreen, colorRed });
 });
 
 //route hobbies details artistes
@@ -114,10 +124,13 @@ app.get("/hobbies/artistes/:selected", (request, response) => {
   const colorSend = color[1];
   let colorGreen = "";
   let colorBlue = "";
+  let colorRed = "";
   if (colorSend === "green") {
-    colorGreen = "#green";
+    colorGreen = "green";
   } else if (colorSend === "blue") {
-    colorBlue = "#green";
+    colorBlue = "blue";
+  } else if (colorSend === "red") {
+    colorRed = "red";
   }
   const routeParameters = request.params;
   const hobbiesSelected = routeParameters.selected;
@@ -136,6 +149,7 @@ app.get("/hobbies/artistes/:selected", (request, response) => {
         listOfHobbies,
         colorBlue,
         colorGreen,
+        colorRed,
       });
     }
   });
@@ -148,10 +162,13 @@ app.get("/hobbies/films/:selected", (request, response) => {
   const colorSend = color[1];
   let colorGreen = "";
   let colorBlue = "";
+  let colorRed = "";
   if (colorSend === "green") {
-    colorGreen = "#green";
+    colorGreen = "green";
   } else if (colorSend === "blue") {
-    colorBlue = "#green";
+    colorBlue = "blue";
+  } else if (colorSend === "red") {
+    colorRed = "red";
   }
   const routeParameters = request.params;
   const hobbiesSelected = routeParameters.selected;
@@ -170,6 +187,7 @@ app.get("/hobbies/films/:selected", (request, response) => {
         listOfHobbies,
         colorBlue,
         colorGreen,
+        colorRed,
       });
     }
   });
@@ -182,10 +200,13 @@ app.get("/hobbies/livres/:selected", (request, response) => {
   const colorSend = color[1];
   let colorGreen = "";
   let colorBlue = "";
+  let colorRed = "";
   if (colorSend === "green") {
-    colorGreen = "#green";
+    colorGreen = "green";
   } else if (colorSend === "blue") {
-    colorBlue = "#green";
+    colorBlue = "blue";
+  } else if (colorSend === "red") {
+    colorRed = "red";
   }
   const routeParameters = request.params;
   const hobbiesSelected = routeParameters.selected;
@@ -204,6 +225,7 @@ app.get("/hobbies/livres/:selected", (request, response) => {
         listOfHobbies,
         colorBlue,
         colorGreen,
+        colorRed,
       });
     }
   });
@@ -216,10 +238,13 @@ app.get("/hobbies/loisirs/:selected", (request, response) => {
   const colorSend = color[1];
   let colorGreen = "";
   let colorBlue = "";
+  let colorRed = "";
   if (colorSend === "green") {
-    colorGreen = "#green";
+    colorGreen = "green";
   } else if (colorSend === "blue") {
-    colorBlue = "#green";
+    colorBlue = "blue";
+  } else if (colorSend === "red") {
+    colorRed = "red";
   }
   const routeParameters = request.params;
   const hobbiesSelected = routeParameters.selected;
@@ -239,6 +264,7 @@ app.get("/hobbies/loisirs/:selected", (request, response) => {
         listOfHobbies,
         colorBlue,
         colorGreen,
+        colorRed,
       });
     }
   });
@@ -250,12 +276,15 @@ app.get("/description", (request, response) => {
   const colorSend = color[1];
   let colorGreen = "";
   let colorBlue = "";
+  let colorRed = "";
   if (colorSend === "green") {
-    colorGreen = "#green";
+    colorGreen = "green";
   } else if (colorSend === "blue") {
-    colorBlue = "#green";
+    colorBlue = "blue";
+  } else if (colorSend === "red") {
+    colorRed = "red";
   }
-  response.render("description", { colorGreen, colorBlue });
+  response.render("description", { colorGreen, colorBlue, colorRed });
 });
 app.get("/blog", (request, response) => {
   const cookies = cookie.parse(request.get("cookie") || "");
@@ -263,12 +292,15 @@ app.get("/blog", (request, response) => {
   const colorSend = color[1];
   let colorGreen = "";
   let colorBlue = "";
+  let colorRed = "";
   if (colorSend === "green") {
-    colorGreen = "#green";
+    colorGreen = "green";
   } else if (colorSend === "blue") {
-    colorBlue = "#green";
+    colorBlue = "blue";
+  } else if (colorSend === "red") {
+    colorRed = "red";
   }
-  response.render("blog", { listeOfArticles, colorGreen, colorBlue });
+  response.render("blog", { listeOfArticles, colorGreen, colorBlue, colorRed });
 });
 app.get("/hobbies", (request, response) => {
   const cookies = cookie.parse(request.get("cookie") || "");
@@ -276,12 +308,15 @@ app.get("/hobbies", (request, response) => {
   const colorSend = color[1];
   let colorGreen = "";
   let colorBlue = "";
+  let colorRed = "";
   if (colorSend === "green") {
-    colorGreen = "#green";
+    colorGreen = "green";
   } else if (colorSend === "blue") {
-    colorBlue = "#green";
+    colorBlue = "blue";
+  } else if (colorSend === "red") {
+    colorRed = "red";
   }
-  response.render("hobbies", { listOfHobbies, colorGreen, colorBlue });
+  response.render("hobbies", { listOfHobbies, colorGreen, colorBlue, colorRed });
 });
 
 //change color mode
@@ -308,12 +343,15 @@ app.get("/options", (request, response) => {
   }
   let colorGreen = "";
   let colorBlue = "";
+  let colorRed = "";
   if (colorSend === "green") {
-    colorGreen = "#green";
+    colorGreen = "green";
   } else if (colorSend === "blue") {
-    colorBlue = "#green";
+    colorBlue = "blue";
+  } else if (colorSend === "red") {
+    colorRed = "red";
   }
-  response.render("options", { colorGreen, colorBlue });
+  response.render("options", { colorGreen, colorBlue, colorRed });
 });
 
 //message connexion

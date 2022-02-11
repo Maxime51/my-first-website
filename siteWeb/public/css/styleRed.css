@@ -1,18 +1,11 @@
 html, body { height : 100%; width: 100%;  margin:0; }
 /* min-width: 1680px; min-width: 1300px;*/
 html{
-  background-image: url("/images/pages/backgroundtest.png");
+  background-image: url("/images/pages/backgroundtestGreen.png");
 
-}
-
-.top{
-  text-align: center;
-  display: flex;
-  flex-direction:column;
-  height: 20%;
 }
 .buttonMode{
-  background-color: #060e38;
+  background-color:  hsl(2, 90%, 29%);
   position:absolute;
   left:1px;
   height: 100px;
@@ -20,27 +13,37 @@ html{
   border-radius:50%;
   color:white;
 }
+.top{
+  text-align: center;
+  display: flex;
+  flex-direction:column;
+  height: 20%;
+}
+.optionsButton{
+  position:absolute;
+  left:1px;
+}
 .imgAccueil{
   border-bottom-left-radius: 200px;
   border-bottom-right-radius: 200px;
-  background-color: #060e38;
+  background-color: hsl(2, 90%, 29%);
   color: white;
   height: 200px;
   width: 300px;
 }
 .imgDescription{
   visibility:hidden;
-  background-color: #060e38;
+  background-color: hsl(2, 90%, 29%);
   border-radius: 50%;
   height: 120px;
   width: 120px;
-  color: white;
   margin-left: 50px;
+  color: white;
   margin-top: 20px;
 }
 .imgHobbies{
   visibility:hidden;
-  background-color: #060e38;
+  background-color: hsl(2, 90%, 29%);
   border-radius: 50%;
   height: 120px;
   width: 120px;
@@ -50,7 +53,7 @@ html{
 }
 .imgBlog{
   visibility:hidden;
-  background-color: #060e38;
+  background-color: hsl(2, 90%, 29%);
   border-radius: 50%;
   height: 120px;
   width: 120px;
@@ -147,7 +150,7 @@ footer{
 #menuHobbies button{
   width: 200px;
   height: 50px;
-  background-image: url("/images/pages/backgroundButton.png");
+  background-image: url("/images/pages/backgroundButtonGreen.png");
   color: white;
   font-size: 20px;
   border-radius: 30px;
@@ -156,7 +159,7 @@ footer{
 #contenu button {
   width: 200px;
   height: 50px;
-  background-image: url("/images/pages/backgroundButton.png");
+  background-image: url("/images/pages/backgroundButtonGreen.png");
   color: white;
   font-size: 20px;
   border-radius: 30px;
